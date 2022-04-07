@@ -1,0 +1,15 @@
+In the C++ language, all elements of the standard C++ infrastructure are declared inside the namespace called std. A namespace is an abstract container or environment created to hold a logical grouping of unique entities (blocks).
+
+An entity defined in a namespace is associated only with that namespace. If you want to use many of the standard C++ entities (we’re going to tell you all about them later) you must insert the using namespace instruction at the top of each file, outside of any function.
+
+The instruction should specify the name of the desired namespace (std in our case). This will make the standard facilities available throughout the program.
+
+It's worth to add (although you're not obliged to use the knowledge just know) that you may omit putting using namespace in your code but the cost of such omission is non-zero. Now you have to inform the compiler where cout block come from and you must do it each time you use any of the entities derived from the std namespace. In other words, you need to write:
+
+std::cout
+
+instead of:
+
+cout
+
+Judge for yourself if it pays off. The compiler doesn't care what you choose. Anyway, we prefer to use using namespace as it makes code clearer and more consistent.
